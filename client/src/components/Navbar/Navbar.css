@@ -1,7 +1,8 @@
 .bottom-nav {
-    height: calc(8vh - 1.5px);
+    height: calc(8vh - 2.5px);
     display: flex;
     justify-content: space-around;
+    margin-top: 1px;
     border-top: 1.5px solid #000;
     z-index: 100;
 }
