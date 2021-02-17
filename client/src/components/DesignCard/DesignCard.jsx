@@ -2,7 +2,12 @@ import React from 'react';
 import './DesignCard.css';
 
 const DesginCard = (props) => {
-    const {author, body, tags} = props;
+    const {id, author, body, tags, expandPost} = props;
+
+    /* When the design card is clicked, call the Home.jsx function to expand it */
+    const handleDesignCardClick = () => {
+        expandPost(id);
+    }
 
     /* Format the tags into a string */
     const getTagString = () => {
@@ -18,7 +23,7 @@ const DesginCard = (props) => {
 
     /* Renders the content */
     return (
-        <div className="design-card">
+        <div className="design-card" onClick={handleDesignCardClick}>
             <div className="design-card-cover"></div>
             <div className="design-card-content">
                 {/* Author profile, author name, post body */}

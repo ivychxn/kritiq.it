@@ -4,28 +4,49 @@ import HeaderWithProfile from '../../components/HeaderWithProfile/HeaderWithProf
 import DesignCard from '../../components/DesignCard/DesignCard';
 import postData from '../../data/posts.json';
 
+import './Home.css';
+
 const Home = () => {
-    const [currPage, setCurrPage] = useState(0); // 0: viewing a list of posts, 1: viewing a specific post
+    const [expandedPostId, setExpandedPostId] = useState(-1);
+
+    /* Expands a post based on id */
+    const expandPost = (id) => {
+        setExpandedPostId(id);
+    }
+
+    /* Closes the expanded post and goes back to the post list */
+    const collapsePost = () => {
+        setExpandedPostId(-1);
+    }
 
     /* Renders "Recent Posts" if currPage is 0, back button otherwise */
     const titleContent = () => {
-        console.log("Yeet");
-        return currPage === 0 ?
+        return expandedPostId === -1 ?
             (<span class="page-title-text">Recent Posts</span>) : 
-            (<span>Back</span>)
+            (<span onClick={collapsePost}>Back</span>)
     }
 
     /* The list of design cards rendered from post data */
-    const designCardList = postData.map((post) => {
-        return <DesignCard author={post.author} body={post.body} tags={post.tags}/>;
+    const designCardList = postData.map((post, id) => {
+        return <DesignCard id={id} author={post.author} body={post.body} tags={post.tags} expandPost={expandPost}/>;
     })
+
+    /* The content of expanded post */
+    const getExpandedPostViewer = () => {
+        return expandedPostId === -1 ?
+        (<div></div>): 
+        (<div className="expanded-post-container"><div>Expanded info for post {expandedPostId}</div></div>)
+    }
 
     return (
         <div className="page-content">
             <HeaderWithProfile/>
             <div className="page-title">{titleContent()}</div>
             <div className="page-body">
-                {designCardList}
+                <div className="design-card-list">
+                    {designCardList}
+                    {getExpandedPostViewer()}
+                </div>
             </div>
         </div>
     )
