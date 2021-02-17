@@ -15,12 +15,17 @@ const Home = () => {
             (<span>Back</span>)
     }
 
+    /* The list of design cards rendered from post data */
+    const designCardList = postData.map((post) => {
+        return <DesignCard author={post.author} body={post.body} tags={post.tags}/>;
+    })
+
     return (
         <div className="page-content">
             <HeaderWithProfile/>
             <div className="page-title">{titleContent()}</div>
             <div className="page-body">
-            <DesignCard author={postData[0].author} body={postData[0].body} tags={postData[0].tags}/>
+                {designCardList}
             </div>
         </div>
     )

@@ -16,6 +16,7 @@ const DesginCard = (props) => {
         return tagString;
     }
 
+    /* Renders the content */
     return (
         <div className="design-card">
             <div className="design-card-cover"></div>

@@ -5,7 +5,7 @@
 }
 
 .design-card-cover {
-    height: 50vw;
+    height: 45vw;
     background-color: #c4c4c4;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -35,10 +35,10 @@
     word-wrap: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-bottom: 1vh;
 }
 
 .design-card-tags {
+    margin-top: 1vh;
     line-height: 1.2rem;
     max-height: 1.2rem;
     overflow: hidden;
