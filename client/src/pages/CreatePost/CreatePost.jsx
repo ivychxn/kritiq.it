@@ -2,7 +2,7 @@ import React from 'react';
 
 const CreatePost = () => {
     return (
-        <div>This is the CreatePost page</div>
+        <div className="page-content">This is the CreatePost page</div>
     )
 }
 
