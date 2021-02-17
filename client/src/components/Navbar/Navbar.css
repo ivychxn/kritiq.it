@@ -1,6 +1,6 @@
 .bottom-nav {
     margin-top: 2vh;
-    height: 8vh;
+    height: calc(8vh - 1.5px);
     display: flex;
     justify-content: space-around;
     border-top: 1.5px solid #000;

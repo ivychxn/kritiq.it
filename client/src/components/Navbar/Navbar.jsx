@@ -12,6 +12,7 @@ import './Navbar.css';
 const Navbar = () => {
     let history = useHistory();
 
+    /* Redirect functions */
     const redirectToHome = () => {
         history.push("/home");
     };
@@ -20,6 +21,7 @@ const Navbar = () => {
         history.push("/create-post");
     }
 
+    /* Content rendering */
     return (
         <div className="bottom-nav">
             <span className="nav-button" onClick={redirectToHome}><img src={homeIcon}/></span>
