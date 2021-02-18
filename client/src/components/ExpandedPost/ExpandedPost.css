@@ -20,4 +20,11 @@
     width: 100%;
     margin-top: 0.5rem;
     padding: 1vh 2vw;
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+}
+
+.add-comment:focus {
+    border-color: #9a9a9a;
+    outline: none;
 }
