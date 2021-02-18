@@ -33,6 +33,15 @@
   background-color: #c4c4c4;
 }
 
+.page-header-back {
+  height: 2.5rem;
+  justify-content: center;
+}
+
+.page-header-back div {
+  margin-top: 1rem;
+}
+
 /* Page generics: Page title */
 .page-title {
   padding-left: 5vw;
