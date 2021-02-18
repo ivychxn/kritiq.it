@@ -5,16 +5,12 @@
 .expanded-post-container {
     position: fixed;
     top: calc(5vh + 4rem);
-    width: 86vw;
+    width: calc(86vw + 1px);
     height: calc(87vh - 4rem);
     background-color: #fff;
     z-index: 10;
     border: 2px solid #fff;
     border-top: none;
     border-bottom: none;
-    transform: translateX(-1px);
-}
-
-.expanded-post-container div {
-    margin-top: 3vh;
+    transform: translateX(-3px);
 }

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 import HeaderWithProfile from '../../components/HeaderWithProfile/HeaderWithProfile';
 import DesignCard from '../../components/DesignCard/DesignCard';
+import ExpandedPost from '../../components/ExpandedPost/ExpandedPost';
 import postData from '../../data/posts.json';
 
 import './Home.css';
@@ -35,7 +36,14 @@ const Home = () => {
     const getExpandedPostViewer = () => {
         return expandedPostId === -1 ?
         (<div></div>): 
-        (<div className="expanded-post-container"><div>Expanded info for post {expandedPostId}</div></div>)
+        (<div className="expanded-post-container">
+            <ExpandedPost 
+                author={postData[expandedPostId].author}
+                body={postData[expandedPostId].body}
+                tags={postData[expandedPostId].tags}
+                comments={postData[expandedPostId].comments}
+            />
+        </div>)
     }
 
     return (
