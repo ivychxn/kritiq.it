@@ -20,7 +20,6 @@ const ExpandedPost = (props) => {
 
     /* Render a list of comments */
     const commentList = comments.map((comment) => {
-        console.log("comment: " + JSON.stringify(comment));
         return <Critique author={comment.author} body={comment.body}/>
     })
 
