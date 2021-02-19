@@ -1,5 +1,5 @@
 # kritiq.it
-A project for COGS 120/CSE 197, Interation Design.
+A project for COGS 120/CSE 170, Interation Design.
 
 It is difficult to grow as a creative person when you're on your own, so connecting designers to a larger network of different people can help them collaborate to learn from each other and gain feedback and inspiration for improvement. Our user base are young student designers interested in entering the industry with moderate to no experience. We are focusing primarily on designers, especially ones that seek creative growth, and providing them with a space to connect, support, and give each other feedback to help each other grow creatively. Originally we were intending for any artist for any type of work, but since then we have recognized that the audience would be too large, and the features we intended to tailor to all audiences was unrealistic for this project’s timeline.
 
